@@ -51,11 +51,26 @@ navA[3].textContent = siteContent.nav["nav-item4"];
 navA[4].textContent = siteContent.nav["nav-item5"];
 navA[5].textContent = siteContent.nav["nav-item6"];
 
-const nav = document.querySelectorAll('a');
+
 // console.log(nav);
-nav.forEach(element => {
+
+const nav = document.querySelector('nav');
+
+
+const newA = document.createElement('a');
+newA.textContent = 'bruhh';
+const newA1 = document.createElement('a');
+newA1.textContent = 'rubhh';
+nav.appendChild(newA);
+nav.prepend(newA1);
+
+const a = document.querySelectorAll('a');
+
+a.forEach(element => {
   element.style.color = 'green'
 })
+
+
 
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent.cta.h1;
