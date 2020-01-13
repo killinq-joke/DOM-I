@@ -1,11 +1,11 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Services",
-    "nav-item-2": "Product",
-    "nav-item-3": "Vision",
-    "nav-item-4": "Features",
-    "nav-item-5": "About",
-    "nav-item-6": "Contact",
+    "navitem1": "Services",
+    "navitem2": "Product",
+    "navitem3": "Vision",
+    "navitem4": "Features",
+    "navitem5": "About",
+    "navitem6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -42,9 +42,20 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-const contactH4 = document.querySelector('.contact h4');
-// console.log(contactH4);
-contactH4.textContent = siteContent.contact.contacth4;
+const navA = Array.from(document.querySelectorAll('nav a'));
+// console.log(navA);
+navA[0].textContent = siteContent.nav.navitem1;
+navA[1].textContent = siteContent.nav.navitem2;
+navA[2].textContent = siteContent.nav.navitem3;
+navA[3].textContent = siteContent.nav.navitem4;
+navA[4].textContent = siteContent.nav.navitem5;
+navA[5].textContent = siteContent.nav.navitem6;
+
+const ctaH1 = document.querySelector('.cta-text h1');
+ctaH1.textContent = siteContent.cta.h1;
+
+const ctaBtn = document.querySelector('.cta-text button');
+ctaBtn.textContent = siteContent.cta.button;
 
 const contactH4 = document.querySelector('.contact h4');
 // console.log(contactH4);
