@@ -27,7 +27,7 @@ const siteContent = {
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
+    "contacth4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
@@ -40,3 +40,17 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+const contactH4 = document.querySelector('.contact h4');
+// console.log(contactH4);
+contactH4.textContent = siteContent.contact.contacth4;
+
+const contactH4 = document.querySelector('.contact h4');
+// console.log(contactH4);
+contactH4.textContent = siteContent.contact.contacth4;
+
+const footerParagraph = document.querySelector('footer p')
+// console.log(footerParagraph);
+footerParagraph.textContent = siteContent.footer.copyright;
+
