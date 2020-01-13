@@ -1,11 +1,11 @@
 const siteContent = {
   "nav": {
-    "navitem1": "Services",
-    "navitem2": "Product",
-    "navitem3": "Vision",
-    "navitem4": "Features",
-    "navitem5": "About",
-    "navitem6": "Contact",
+    "nav-item1": "Services",
+    "nav-item2": "Product",
+    "nav-item3": "Vision",
+    "nav-item4": "Features",
+    "nav-item5": "About",
+    "nav-item6": "Contact",
     "img-src": "img/logo.png"
   },
   "cta": {
@@ -13,21 +13,21 @@ const siteContent = {
     "button": "Get Started",
     "imgsrc": "img/header-img.png"
   },
-  "maincontent": {
-    "featuresh4":"Features",
-    "featurescontent": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "abouth4":"About",
-    "aboutcontent": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+  "main-content": {
+    "features-h4":"Features",
+    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "about-h4":"About",
+    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "servicesh4":"Services",
-    "servicescontent": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "producth4":"Product",
-    "productcontent": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "visionh4":"Vision",
-    "visioncontent": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "services-h4":"Services",
+    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "product-h4":"Product",
+    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "vision-h4":"Vision",
+    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contacth4" : "Contact",
+    "contact-h4" : "Contact",
     "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
@@ -44,12 +44,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const navA = Array.from(document.querySelectorAll('nav a'));
 // console.log(navA);
-navA[0].textContent = siteContent.nav.navitem1;
-navA[1].textContent = siteContent.nav.navitem2;
-navA[2].textContent = siteContent.nav.navitem3;
-navA[3].textContent = siteContent.nav.navitem4;
-navA[4].textContent = siteContent.nav.navitem5;
-navA[5].textContent = siteContent.nav.navitem6;
+navA[0].textContent = siteContent.nav["nav-item1"];
+navA[1].textContent = siteContent.nav["nav-item2"];
+navA[2].textContent = siteContent.nav["nav-item3"];
+navA[3].textContent = siteContent.nav["nav-item4"];
+navA[4].textContent = siteContent.nav["nav-item5"];
+navA[5].textContent = siteContent.nav["nav-item6"];
 
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent.cta.h1;
@@ -61,21 +61,26 @@ const ctaImg = document.querySelector('#cta-img');
 ctaImg.textContent = siteContent.cta.imgsrc;
 
 const topContent = Array.from(document.querySelectorAll('.text-content'));
-topContent[0].querySelector('h4').textContent = siteContent.maincontent.featuresh4;
-topContent[0].querySelector('p').textContent = siteContent.maincontent.featurescontent;
-topContent[1].querySelector('h4').textContent = siteContent.maincontent.abouth4;
-topContent[1].querySelector('p').textContent = siteContent.maincontent.aboutcontent;
-topContent[2].querySelector('h4').textContent = siteContent.maincontent.servicesh4;
-topContent[2].querySelector('p').textContent = siteContent.maincontent.servicescontent;
-topContent[3].querySelector('h4').textContent = siteContent.maincontent.producth4;
-topContent[3].querySelector('p').textContent = siteContent.maincontent.productcontent;
-topContent[4].querySelector('h4').textContent = siteContent.maincontent.visionh4;
-topContent[4].querySelector('p').textContent = siteContent.maincontent.visioncontent;
-console.log(topContent[0]);
+topContent[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+topContent[0].querySelector('p').textContent = siteContent["main-content"]["features-content"];
+topContent[1].querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+topContent[1].querySelector('p').textContent = siteContent["main-content"]["about-content"];
+topContent[2].querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+topContent[2].querySelector('p').textContent = siteContent["main-content"]["services-content"];
+topContent[3].querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+topContent[3].querySelector('p').textContent = siteContent["main-content"]["product-content"];
+topContent[4].querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+topContent[4].querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+// console.log(topContent[0]);
+
+const middleImg = document.querySelector('#middle-img');
+
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+console.log(middleImg);
 
 const contactH4 = document.querySelector('.contact h4');
 // console.log(contactH4);
-contactH4.textContent = siteContent.contact.contacth4;
+contactH4.textContent = siteContent.contact["contact-h4"];
 
 const footerParagraph = document.querySelector('footer p')
 // console.log(footerParagraph);
