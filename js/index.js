@@ -58,7 +58,8 @@ const ctaBtn = document.querySelector('.cta-text button');
 ctaBtn.textContent = siteContent.cta.button;
 
 const ctaImg = document.querySelector('#cta-img');
-ctaImg.textContent = siteContent.cta.imgsrc;
+ctaImg.setAttribute('src', siteContent.cta.imgsrc);
+// console.log(ctaImg);
 
 const topContent = Array.from(document.querySelectorAll('.text-content'));
 topContent[0].querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
@@ -76,11 +77,17 @@ topContent[4].querySelector('p').textContent = siteContent["main-content"]["visi
 const middleImg = document.querySelector('#middle-img');
 
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-console.log(middleImg);
+// console.log(middleImg);
 
 const contactH4 = document.querySelector('.contact h4');
 // console.log(contactH4);
 contactH4.textContent = siteContent.contact["contact-h4"];
+
+const contactP = Array.from(document.querySelectorAll('.contact p'));
+// console.log(contactP);
+contactP[0].textContent = siteContent.contact.address;
+contactP[1].textContent = siteContent.contact.phone;
+contactP[2].textContent = siteContent.contact.email;
 
 const footerParagraph = document.querySelector('footer p')
 // console.log(footerParagraph);
