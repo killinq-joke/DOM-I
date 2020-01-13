@@ -51,6 +51,12 @@ navA[3].textContent = siteContent.nav["nav-item4"];
 navA[4].textContent = siteContent.nav["nav-item5"];
 navA[5].textContent = siteContent.nav["nav-item6"];
 
+const nav = document.querySelectorAll('a');
+// console.log(nav);
+nav.forEach(element => {
+  element.style.color = 'green'
+})
+
 const ctaH1 = document.querySelector('.cta-text h1');
 ctaH1.textContent = siteContent.cta.h1;
 
