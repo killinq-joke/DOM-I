@@ -11,20 +11,20 @@ const siteContent = {
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
-    "img-src": "img/header-img.png"
+    "imgsrc": "img/header-img.png"
   },
-  "main-content": {
-    "features-h4":"Features",
-    "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
-    "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+  "maincontent": {
+    "featuresh4":"Features",
+    "featurescontent": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "abouth4":"About",
+    "aboutcontent": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
-    "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
-    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
-    "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "servicesh4":"Services",
+    "servicescontent": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "producth4":"Product",
+    "productcontent": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "visionh4":"Vision",
+    "visioncontent": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
     "contacth4" : "Contact",
@@ -56,6 +56,22 @@ ctaH1.textContent = siteContent.cta.h1;
 
 const ctaBtn = document.querySelector('.cta-text button');
 ctaBtn.textContent = siteContent.cta.button;
+
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.textContent = siteContent.cta.imgsrc;
+
+const topContent = Array.from(document.querySelectorAll('.text-content'));
+topContent[0].querySelector('h4').textContent = siteContent.maincontent.featuresh4;
+topContent[0].querySelector('p').textContent = siteContent.maincontent.featurescontent;
+topContent[1].querySelector('h4').textContent = siteContent.maincontent.abouth4;
+topContent[1].querySelector('p').textContent = siteContent.maincontent.aboutcontent;
+topContent[2].querySelector('h4').textContent = siteContent.maincontent.servicesh4;
+topContent[2].querySelector('p').textContent = siteContent.maincontent.servicescontent;
+topContent[3].querySelector('h4').textContent = siteContent.maincontent.producth4;
+topContent[3].querySelector('p').textContent = siteContent.maincontent.productcontent;
+topContent[4].querySelector('h4').textContent = siteContent.maincontent.visionh4;
+topContent[4].querySelector('p').textContent = siteContent.maincontent.visioncontent;
+console.log(topContent[0]);
 
 const contactH4 = document.querySelector('.contact h4');
 // console.log(contactH4);
